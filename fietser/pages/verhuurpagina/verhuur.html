@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verhuurpagina</title>
+    <link rel="stylesheet" href="./verhuur.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img class="fietser" src="../homepagina/img/bicycle (1).png" alt="Fietsenpagina Logo">
+            <h1>Verhuurpagina</h1>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <img src="./img/menu.png" alt="Menu Icon">
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Zoeken..." id="searchInput" />
+            <button id="searchButton">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        <div class="menu-dropdown" id="menu-dropdown">
+            <ul>
+              <li><a href="/fietser/pages/fietsenpagina/fietsen.html">Fietsenpagina</a></li>
+              <li><a href="/fietser/pages/homepagina/index.html">HomePagina</a></li>
+              <li><a href="/fietser/pages/contactpagina/index.html">Contact</a></li>
+              <li><a href="/fietser/pages/aboutpagina/index.html">Over ons</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+    
+    <div id="main-screen">
+        <div class="container">
+            <div class="image-container">
+                <img src="./img/Gazelle_CityGo_C7.jpg" alt="Fiets 1">
+                <img src="./img/Gazelle_Orange_C7.jpg" alt="Fiets 2">
+            </div>
+            <table>
+                <tr>
+                    <th>Selecteer</th>
+                    <th>Fiets Type</th>
+                    <th>Prijs per Dag</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Fiets 1"></td>
+                    <td>Gazelle_CityGo_C7</td>
+                    <td>€10</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Fiets 2"></td>
+                    <td>Gazelle_Orange_C7</td>
+                    <td>€12</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Fiets 3"></td>
+                    <td>Pelikaan_Carry_On_Lady</td>
+                    <td>€15</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Fiets 4"></td>
+                    <td>Stella_Allegra_voorwielmotor</td>
+                    <td>€20</td>
+                </tr>
+            </table>
+            <div class="image-container">
+                <img src="./img/Pelikaan_Carry_On_Lady.jpg" alt="Fiets 3">
+                <img src="./img/Stella_Allegra_voorwielmotor.jpg" alt="Fiets 4">
+            </div>
+        </div>
+        <div class="button-container">
+            <button onclick="submitSelection()">Huur de fietsen</button>
+        </div>
+    </div>
+    <br><br><br><br><br>
+
+    <div id="details-screen" class="hidden">
+        <div class="container">
+           
+            <div class="form-container">
+                <div class="form-left">
+                    <h3>Adresgegevens</h3>
+                    <input type="text" placeholder="Naam" id="name">
+                    <input type="email" placeholder="E-mail" id="email">
+                    <input type="text" placeholder="Adres" id="address">
+                    <input type="text" placeholder="Stad" id="city">
+                    <input type="text" placeholder="Postcode" id="zipcode">
+                    <button onclick="submitDetails()">Gegevens versturen</button>
+                    <div id="confirmation-message" class="confirmation hidden">Gegevens verstuurd</div>
+                </div>
+                <div class="form-right">
+                    <h3>Gekozen Fietsen</h3>
+                    <div id="selected-bikes" class="selected-bikes-container"></div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <br><br><br><br>
+
+
+
+    <footer class="footer-navbar">
+        <div class="footer-left">
+            <a href="/fietser/pages/aboutpagina/index.html">Over Ons</a>
+            <a href="/fietser/pages/contactpagina/index.html">Contact</a>
+            <a href="mailto:info@fluitendefietser.nl">info@fluitendefietser.nl</a>
+        </div>
+        <div class="footer-right">
+            © 2022 Fluitende Fietser | Algemene Voorwaarden | VK: 88599665 | BTW NL999888492Z09 | 
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+        </div>
+    </footer>
+
+
+    <script src="./verhuur.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactpagina</title>
+    <link rel="stylesheet" href="./contact.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img class="fietser" src="../homepagina/img/bicycle (1).png" alt="Fietsenpagina Logo">
+            <h1>Contactpagina</h1>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <img src="./img/menu.png" alt="Menu Icon">
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Zoeken..." id="searchInput" />
+            <button id="searchButton">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        <div class="menu-dropdown" id="menu-dropdown">
+            <ul>
+                <li><a href="/fietser/pages/fietsenpagina/fietsen.html">Fietsenpagina</a></li>
+                <li><a href="/fietser/pages/homepagina/index.html">HomePagina</a></li>
+                <li><a href="/fietser/pages/contactpagina/index.html">Contact</a></li>
+                <li><a href="/fietser/pages/aboutpagina/index.html">Over ons</a></li>
+            </ul>
+        </div>
+    </nav>
+<br><br><br>
+
+    <div class="container">
+        <div class="form-section">
+            <h2>Contactformulier</h2>
+            <form id="contactForm">
+                <label for="firstName">Voornaam:</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Achternaam:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="email">E-mailadres:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="question">Uw vraag:</label>
+                <textarea id="question" name="question" rows="5" required></textarea>
+
+                <button type="submit">Verstuur</button>
+            </form>
+        </div>
+        <div class="info-section">
+            <h2>Openingstijden</h2>
+            <p>Maandag - Vrijdag: 09:00 - 17:00</p>
+            <p>Zaterdag: 10:00 - 16:00</p>
+            <p>Zondag: Gesloten</p>
+
+            <h2>Adresgegevens</h2>
+            <p>FluitendeFietser<br>
+            papenvoortseHeide<br>
+            1234 AB<br>
+            Telefoon: +31 123 456 789<br>
+            E-mail: Fluitendefietser@gmail.nl</p>
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2448.646856295528!2d5.593374!3d51.474249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6c5a0b1e1c8a7%3A0x5a0faa5c7eacf18d!2sSample%20Location!5e0!3m2!1sen!2snl!4v1698765432109" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+
+<br><br><br><br><br><br><br>
+    <footer class="footer-navbar">
+        <div class="footer-left">
+            <a href="/fietser/pages/aboutpagina/index.html">Over Ons</a>
+            <a href="/fietser/pages/contactpagina/index.html">Contact</a>
+            <a href="mailto:info@fluitendefietser.nl">info@fluitendefietser.nl</a>
+        </div>
+        <div class="footer-right">
+            © 2022 Fluitende Fietser | Algemene Voorwaarden | VK: 88599665 | BTW NL999888492Z09 | 
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+        </div>
+    </footer>
+
+<script src="./contact.js"></script>
+</body>
+</html>

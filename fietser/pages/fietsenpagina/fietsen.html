@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fietsenpagina</title>
+    <link rel="stylesheet" href="fiets.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img class="fietser" src="../homepagina/img/bicycle (1).png" alt="Fietsenpagina Logo">
+            <h1>Fietsenpagina</h1>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <img src="./img/menu.png" alt="Menu Icon">
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Zoeken..." id="searchInput" />
+            <button id="searchButton">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        <div class="menu-dropdown" id="menu-dropdown">
+            <ul>
+                <li><a href="/fietser/pages/verhuurpagina/verhuur.html">Verhuurpagina</a></li>
+                <li><a href="/fietser/pages/homepagina/index.html">HomePagina</a></li>
+                <li><a href="/fietser/pages/contactpagina/index.html">Contact</a></li>
+                <li><a href="/fietser/pages/aboutpagina/index.html">Over ons</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+</header>
+
+<div class="cart-icon" id="cart-icon">
+    <img src="./img/shopping-cart.png" alt="Cart Icon">
+    <span id="cart-count">!</span>
+</div>
+
+<!-- Sepet İçeriği -->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Winkelwagen</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Totaalbedrag:</strong> €<span id="total-amount">0</span></p>
+        <button id="checkout-button">Afrekenen</button>
+    </div>
+</div>
+
+    <div class="container">
+        <!-- Kartlar -->
+        <a href="#card1" class="card" data-modal="modal1">
+            <img src="./img/Gazelle_CityGo_C7.jpg" alt="Resim 1">
+            <h3>Gazelle_CityGo_C7</h3>
+            <p>Elektrisch</p>
+        </a>
+        
+
+        
+        <!-- Modal 1 -->
+       <div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img class="cartimg" src="./img/Gazelle_CityGo_C7.jpg" alt="">
+        <h2>Gazelle_CityGo_C7</h2>
+        <p><strong>Stijl:</strong> Elektrisch</p>
+        <p><strong>informatie:</strong>Vrouwenfiets </p>
+        <p><strong>Prijs:</strong> €1500</p>
+        <p><strong>Fietscode:</strong>2001</p>
+        <p><strong>Kleur:</strong>Siklement</p>
+        <label for="quantity1">Aantal:</label>
+        <input type="number" id="quantity1" value="1" min="1">
+        <label for="rentalTime1">Huurduur (dagen):</label>
+        <input type="number" id="rentalTime1" value="1" min="1">
+        <button onclick="addToCart('Gazelle_CityGo_C7', 1500, 'quantity1', 'rentalTime1')">Toevoegen</button>
+    </div>
+</div>
+        <a href="#card2" class="card" data-modal="modal2">
+            <img src="./img/Gazelle_Orange_C7.jpg" alt="Resim 2">
+            <h3>Gazelle_Orange_C7</h3>
+            <p>Niet Elektrisch</p>
+        </a>
+        
+        <!-- Modal 2 -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img class="cartimg" src="./img/Gazelle_Orange_C7.jpg" alt="">
+                <h2>Gazelle_Orange_C7</h2>
+                <p><strong>Stijl:</strong> Elektrisch</p>
+                <p><strong>Informatie:</strong> vrouwenfiets </p>
+                <p><strong>Prijs:</strong>€750</p>
+                <p><strong>Fietscode:</strong>2002</p>
+                <p><strong>Kleur:</strong>Zwart</p>
+                <label for="quantity1">Aantal:</label>
+                <input type="number" id="quantity1" value="1" min="1">
+                <label for="rentalTime1">Huurduur (dagen):</label>
+                <input type="number" id="rentalTime1" value="1" min="1">
+                <button onclick="addToCart('Gazelle_CityGo_C7', 1500, 'quantity1', 'rentalTime1')">Toevoegen</button>
+        
+            </div>
+        </div>
+
+        <a href="#card3" class="card" data-modal="modal3">
+            <img src="./img/Pelikaan_Carry_On_Lady.jpg" alt="Resim 3">
+            <h3>Pelikaan_Carry_On_Lady</h3>
+            <p>Elektrisch</p>
+        </a>
+        
+        <!-- Modal 3 -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img class="cartimg" src="./img/Pelikaan_Carry_On_Lady.jpg" alt="">
+                <h2>Pelikaan_Carry_On_Lady</h2>
+                <p><strong>Stijl:</strong> Elektrisch</p>
+                <p><strong>Informatie:</strong>vrouwenfiets</p>
+                <p><strong>Prijs:</strong> €1500</p>
+                <p><strong>Fietscode:</strong>2003</p>
+                <p><strong>Kleur:</strong>Orange</p>
+                <label for="quantity1">Aantal:</label>
+                <input type="number" id="quantity1" value="1" min="1">
+                <label for="rentalTime1">Huurduur (dagen):</label>
+                <input type="number" id="rentalTime1" value="1" min="1">
+                <button onclick="addToCart('Gazelle_CityGo_C7', 1500, 'quantity1', 'rentalTime1')">Toevoegen</button>
+        
+            </div>
+        </div>
+        <a href="#card4" class="card" data-modal="modal4">
+            <img src="./img/Stella_Allegra_voorwielmotor.jpg" alt="Resim 4">
+            <h3>Stella_Allegra</h3>
+            <p>Elektrisch</p>
+        </a>
+        
+        <!-- Modal 4 -->
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img class="cartimg" src="./img/Stella_Allegra_voorwielmotor.jpg" alt="">
+                <h2>Stella_Allegra</h2>
+                <p><strong>stijl:</strong> Elektrisch</p>
+                <p><strong>Informatie:</strong> mannenfiets</p>
+                <p><strong>Prijs:</strong> €2000</p>
+                <p><strong>Fietscode:</strong>2004</p>
+                <p><strong>Kleur:</strong>Wit</p>
+                <label for="quantity1">Aantal:</label>
+                <input type="number" id="quantity1" value="1" min="1">
+                <label for="rentalTime1">Huurduur (dagen):</label>
+                <input type="number" id="rentalTime1" value="1" min="1">
+                <button onclick="addToCart('Gazelle_CityGo_C7', 1500, 'quantity1', 'rentalTime1')">Toevoegen</button>
+        
+            </div>
+        </div>
+    </div>
+<br><br><br><br>
+    <footer class="footer-navbar">
+        <div class="footer-left">
+            <a href="/fietser/pages/aboutpagina/index.html">Over Ons</a>
+            <a href="/fietser/pages/contactpagina/index.html">Contact</a>
+            <a href="mailto:info@fluitendefietser.nl">info@fluitendefietser.nl</a>
+        </div>
+        <div class="footer-right">
+            © 2022 Fluitende Fietser | Algemene Voorwaarden | VK: 88599665 | BTW NL999888492Z09 | 
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+        </div>
+    </footer>
+
+
+
+    <script src="./fiets.js"></script>
+</body>
+</html>
